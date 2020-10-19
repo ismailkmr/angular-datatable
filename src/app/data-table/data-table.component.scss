@@ -1,0 +1,131 @@
+:host ::ng-deep .mat-sort-header-container {
+  display: flex;
+  justify-content: start;
+}
+
+.full-width-table {
+  width: 100%;
+  display: table;
+}
+tr{
+  cursor: pointer;
+  width: 100%;
+}
+tr.mat-header-row{
+  height: 40px;
+  position: relative;
+}
+
+.mat-sort-header{
+  position: relative;
+  div{
+    position: absolute;
+    top: 50%;
+  }
+}
+.mat-table-cell{
+  position: relative;
+span
+{
+  position: absolute;
+  top:50%;
+}
+}
+th.mat-header-cell span{
+  text-align: right;
+}
+.mat-sort-header{
+  padding-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.mat-sort-header-container{
+    position: absolute;
+    top: 50%;
+}
+.detailBox{
+  width: 400px;
+  height: 100vh;
+  background-color: #EBECF0;
+  position: absolute;
+  opacity: .9;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  display: block;
+  .close {
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    width: 22px;
+    height: 22px;
+    opacity: 0.3;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 22px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+}
+.detailBoxHide{
+  display: none;
+}
+.overlay{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1000;
+  background-color: #000;
+  opacity: .3;
+}
+.box {
+  overflow: hidden;
+}
+.parent {
+  height: 100%;
+  width: 200%;
+  display: flex;
+  div {
+     flex: 1; 
+  }
+}
+
+:host {
+  display: block;
+  overflow: hidden;
+}
+.panes {
+  height: 100%;
+  width: 500px;
+  div {
+    float: right;
+    width: 50%;
+  }
+}
+.tableDetail{
+  width: 200px;
+  height: 200px;
+  background-color: magenta;
+  position: absolute;
+  right: 0;
+  display: none;
+}
+h2{
+  padding: 10px;
+}
